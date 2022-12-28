@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpInputName: Jump
-  jumpForce: {x: 0, y: 10, z: 0}
+  jumpForce: {x: 0, y: 9, z: 0}
   coyoteTimeDuration: 0.25
   jumpLayerMask:
     serializedVersion: 2
@@ -333,14 +333,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallJumpInputName: Jump
-  wallJumpForce: {x: 0, y: 12, z: -10}
+  wallJumpForce: {x: 0, y: 12, z: -5}
   wallJumpLayerMask:
     serializedVersion: 2
     m_Bits: 128
   invertLookDirectionOnWallJump: 1
   gravityDampenWhileOnWall: 2
   preventMovingAfterWallJump: 1
-  movePreventionDuration: 1
+  movePreventionDuration: 0.5
   mover: {fileID: 5317531625026115424}
   resetJumpCountOnWallJump: 1
   jumper: {fileID: 1875056339259706109}
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementType: 1
-  maximumVelocity: 5
+  maximumVelocity: 7
   useXAxis: 1
   useYAxis: 0
   useZAxis: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   xInputName: Horizontal
   yInputName: Vertical
   zInputName: Vertical
-  xSpeed: 5
+  xSpeed: 7
   ySpeed: 5
   zSpeed: 5
   lookAtDirection: 1
