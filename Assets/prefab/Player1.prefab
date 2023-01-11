@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 1522184429792263320}
   - component: {fileID: 1522184429792263323}
   - component: {fileID: 1522184429792263322}
-  - component: {fileID: 1522184429792263321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gros pif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1522184429792263321
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184429792263327}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1522184430888038698
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,8 +94,7 @@ GameObject:
   - component: {fileID: 1522184430888038699}
   - component: {fileID: 1522184430888038694}
   - component: {fileID: 1522184430888038693}
-  - component: {fileID: 1522184430888038692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,20 +167,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1522184430888038692
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184430888038698}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1522184431500275015
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +180,8 @@ GameObject:
   - component: {fileID: 1522184431500275008}
   - component: {fileID: 1522184431500275011}
   - component: {fileID: 1522184431500275036}
-  m_Layer: 0
+  - component: {fileID: -5781542776365138237}
+  m_Layer: 8
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +203,7 @@ Transform:
   - {fileID: 1522184430888038699}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &1522184431500275009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementType: 1
-  maximumVelocity: 10
+  maximumVelocity: 9
   useXAxis: 1
   useYAxis: 0
   useZAxis: 0
@@ -253,17 +225,17 @@ MonoBehaviour:
   xInputName: Horizontal
   yInputName: Vertical
   zInputName: Vertical
-  xSpeed: 10
+  xSpeed: 9
   ySpeed: 5
   zSpeed: 5
   lookAtDirection: 1
   isMovementLocal: 0
   useWallAvoidance: 1
-  wallAvoidanceSize: {x: 0.5, y: 0.8, z: 0.1}
+  wallAvoidanceSize: {x: 0.5, y: 0.7, z: 0.1}
   wallAvoidanceOffset: {x: 0, y: 0, z: 0.5}
   wallAvoidanceLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   animator: {fileID: 0}
   movementParticleSystem: {fileID: 0}
   minVelocityToToggle: 0.2
@@ -330,7 +302,7 @@ MonoBehaviour:
   airJumpForce: {x: 0, y: 7, z: 0}
   resetVelocityOnAirJump: 0
   useCollisionCheck: 1
-  collisionOffset: {x: 0, y: 0, z: 0}
+  collisionOffset: {x: 0, y: -0.5, z: 0}
   collisionCheckRadius: 1
   jumpFX: {fileID: 0}
   airJumpFX: {fileID: 0}
@@ -357,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallJumpInputName: Jump
-  wallJumpForce: {x: 5, y: 10, z: 0}
+  wallJumpForce: {x: 0, y: 10, z: 0}
   wallJumpLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -378,3 +350,17 @@ MonoBehaviour:
   animator: {fileID: 0}
   wallJumpTriggerName: wallJump
   inputChoiceIndex: 5
+--- !u!136 &-5781542776365138237
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522184431500275015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
