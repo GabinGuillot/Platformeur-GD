@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementType: 1
-  maximumVelocity: 9
+  maximumVelocity: 6
   useXAxis: 1
   useYAxis: 0
   useZAxis: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   xInputName: Horizontal
   yInputName: Vertical
   zInputName: Vertical
-  xSpeed: 9
+  xSpeed: 6
   ySpeed: 5
   zSpeed: 5
   lookAtDirection: 1
