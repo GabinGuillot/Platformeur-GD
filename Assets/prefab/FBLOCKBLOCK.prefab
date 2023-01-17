@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 6999227665699701581}
   - component: {fileID: 7027639443598040522}
   - component: {fileID: 4672720097348079495}
-  - component: {fileID: 6892964964746765825}
-  - component: {fileID: -6819797892179122470}
-  - component: {fileID: 5489991127607014091}
-  - component: {fileID: 2830024825848972955}
+  - component: {fileID: 2171565138885038704}
+  - component: {fileID: 6298202382053593195}
   m_Layer: 0
   m_Name: FBLOCKBLOCK
   m_TagString: Untagged
@@ -118,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 2
---- !u!114 &6892964964746765825
+--- !u!114 &2171565138885038704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,88 +125,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3531267904134692718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 237cc2000fb3c774fae7752d1347f535, type: 3}
+  m_Script: {fileID: 11500000, guid: 5720c6a2974e7bb489b57249e7140f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementType: 1
-  maximumVelocity: -0.05
-  useXAxis: 0
-  useYAxis: 1
-  useZAxis: 0
-  requiresInput: 0
-  xInputName: Horizontal
-  yInputName: Vertical
-  zInputName: Vertical
-  xSpeed: 5
-  ySpeed: -0.05
-  zSpeed: 5
-  lookAtDirection: 0
-  isMovementLocal: 0
-  useWallAvoidance: 0
-  wallAvoidanceSize: {x: 0.3, y: 1, z: 0.1}
-  wallAvoidanceOffset: {x: 0, y: 0, z: 0.5}
-  wallAvoidanceLayers:
+  range: 3
+  specificTarget: {fileID: 1522184431500275010, guid: 91a87157bcdec674bb8759c0c76f5b27,
+    type: 3}
+  targetTagName: Player
+  disableInstead: 1
+  components:
+  - {fileID: 0}
+  layerMask:
     serializedVersion: 2
-    m_Bits: 1
-  animator: {fileID: 0}
-  movementParticleSystem: {fileID: 0}
-  minVelocityToToggle: 0.2
-  xDirParameterName: xDirection
-  yDirParameterName: yDirection
-  zDirParameterName: zDirection
-  keepOrientationOnIdle: 1
-  trackSpeed: 1
-  speedParameterName: MoveSpeed
-  animateWhenGroundedOnly: 0
-  collisionCheckRadius: 0.65
-  collisionOffset: {x: 0, y: 0.1, z: 0}
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  groundedParameterName: isGrounded
-  useGravity: 1
-  gravityForce: 10
-  maxGravityForce: 50
+    m_Bits: 256
+  findWithTag: 0
+  revertWhenOutOfRange: 1
   displayDebugInfo: 1
-  canMove: 1
-  currentSpeed: {x: 0, y: 0, z: 0}
-  xInputChoiceIndex: 0
-  yInputChoiceIndex: 0
-  zInputChoiceIndex: 0
---- !u!114 &-6819797892179122470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de70fe75f3b055242901bad5c505ed0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseGravityForce: {x: 0, y: -9.81, z: 0}
-  secondaryGravityForce: {x: 0, y: 9.81, z: 0}
-  maxVelocity: 50
-  invertOnInput: 1
-  inputName: Jump
-  instantGravityChangeOnInput: 0
-  invertJumpingDirection: 0
-  onlyWhenGrounded: 0
-  collisionCheckDistance: 0.65
-  invertAnimationType: 0
-  transformToInvert: {fileID: 0}
-  invertedRotation: {x: -180, y: 0, z: 0}
-  normalRotation: {x: 0, y: 0, z: 0}
-  gravityChangeBoolName: inverted
-  animator: {fileID: 0}
-  currentGravityForce: {x: 0, y: 0, z: 0}
-  showForces: 1
-  showGravity: 1
-  showGroundCheck: 1
-  showAnimation: 1
-  inputChoiceIndex: 0
---- !u!114 &5489991127607014091
+--- !u!114 &6298202382053593195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,23 +150,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3531267904134692718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3ecaf974284ed46b8c1b731aa478be, type: 3}
+  m_Script: {fileID: 11500000, guid: cd6bf345a734d934480925f4a254e2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTag: 1
-  tagName: f block sol
---- !u!114 &2830024825848972955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894486209c6604f4e8d2436c4d814c09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stickOnlyOnTop: 0
+  teleportPoint: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
   useTag: 0
   tagName: Player
+  requireInput: 0
+  inputName: Fire1
+  displayTeleportPoint: 1
+  inputChoiceIndex: 0
