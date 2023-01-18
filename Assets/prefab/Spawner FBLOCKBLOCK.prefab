@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3531267904134692718
+--- !u!1 &5824440165545591500
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8176896029054109309}
-  - component: {fileID: 3784483983415622928}
-  - component: {fileID: 6999227665699701581}
-  - component: {fileID: 7027639443598040522}
-  - component: {fileID: 4672720097348079495}
-  - component: {fileID: 2171565138885038704}
-  - component: {fileID: -6957516653846488531}
+  - component: {fileID: 1202231947550653407}
+  - component: {fileID: 6147470848029081778}
+  - component: {fileID: 69599575101243119}
+  - component: {fileID: 23139070395555944}
+  - component: {fileID: 7049545239993768648}
   m_Layer: 6
-  m_Name: FBLOCKBLOCK
-  m_TagString: Untagged
+  m_Name: Spawner FBLOCKBLOCK
+  m_TagString: f block sol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8176896029054109309
+--- !u!4 &1202231947550653407
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
+  m_GameObject: {fileID: 5824440165545591500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4952936, y: 1.5312394, z: 3.3448715}
+  m_LocalPosition: {x: -0.7200012, y: -7.79, z: 7.0100007}
   m_LocalScale: {x: 1.5344119, y: 1, z: 3.391749}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3784483983415622928
+--- !u!33 &6147470848029081778
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
+  m_GameObject: {fileID: 5824440165545591500}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6999227665699701581
+--- !u!23 &69599575101243119
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
-  m_Enabled: 1
+  m_GameObject: {fileID: 5824440165545591500}
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -87,71 +85,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7027639443598040522
+--- !u!65 &23139070395555944
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
+  m_GameObject: {fileID: 5824440165545591500}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4672720097348079495
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 2
---- !u!114 &2171565138885038704
+--- !u!114 &7049545239993768648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5720c6a2974e7bb489b57249e7140f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 3
-  specificTarget: {fileID: 1522184431500275010, guid: 91a87157bcdec674bb8759c0c76f5b27,
-    type: 3}
-  targetTagName: Player
-  disableInstead: 1
-  components:
-  - {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  findWithTag: 0
-  revertWhenOutOfRange: 1
-  displayDebugInfo: 1
---- !u!114 &-6957516653846488531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531267904134692718}
+  m_GameObject: {fileID: 5824440165545591500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3ecaf974284ed46b8c1b731aa478be, type: 3}
+  m_Script: {fileID: 11500000, guid: fa95f99d5f51a6649be31df169a3d006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useTag: 1
-  tagName: f block sol
+  shareOrientation: 1
+  displayDebugInfo: 1
+  prefabToSpawn:
+  - prefab: {fileID: 3531267904134692718, guid: 4bfcda6310b34354aa140d18d387dd9b,
+      type: 3}
+    weight: 1
+  randomMinOffset: {x: 0, y: 0, z: 0}
+  randomMaxOffset: {x: 0, y: 0, z: 0}
+  useCooldown: 0
+  spawnCooldown: 1
+  useInput: 1
+  spawnInputName: Fire1
+  spawnInsideParent: 0
+  parent: {fileID: 0}
+  requireResources: 0
+  resourceManager: {fileID: 0}
+  resourceIndex: 0
+  resourceCostOnUse: 1
+  destroyOnNoResourceLeft: 0
+  inputChoiceIndex: 2
