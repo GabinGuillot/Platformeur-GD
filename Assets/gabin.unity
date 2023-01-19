@@ -33854,6 +33854,11 @@ PrefabInstance:
       propertyPath: gravityDampenWhileOnWall
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3643219076838231795, guid: 91a87157bcdec674bb8759c0c76f5b27,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ac0e39d3941be448a45d2b8856897ff, type: 2}
     m_RemovedComponents:
     - {fileID: 1522184431500275036, guid: 91a87157bcdec674bb8759c0c76f5b27, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 91a87157bcdec674bb8759c0c76f5b27, type: 3}

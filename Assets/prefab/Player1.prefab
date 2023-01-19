@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1522184431500275011}
   - component: {fileID: 1522184431500275036}
   - component: {fileID: -5781542776365138237}
+  - component: {fileID: 6584515226818893660}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -197,6 +198,32 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6584515226818893660
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522184431500275015}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 4d2ba8b40cec9014099836a86e3fdb3d, type: 3}
+  m_Controller: {fileID: 9100000, guid: b4eed1e3bfa9e3e498590284cdf508b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
+    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform
+    'mixamorig:RightHandIndex3'\n\tTransform 'mixamorig:RightFoot'\n\tand more ...\n\tFrom
+    animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2059169848650169954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,32 +239,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.11611
+      value: 0.17656733
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.11611
+      value: 0.17656733
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.11611
+      value: 0.17656733
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.004415
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.96416
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0643
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
@@ -278,6 +305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SadSad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d2ba8b40cec9014099836a86e3fdb3d, type: 3}
