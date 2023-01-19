@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1522184431500275015
+--- !u!1 &7988866125611135899
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,146 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1522184431500275010}
-  - component: {fileID: 1522184431500275009}
-  - component: {fileID: 1522184431500275008}
-  - component: {fileID: 1522184431500275011}
-  - component: {fileID: 1522184431500275036}
-  - component: {fileID: -5781542776365138237}
-  m_Layer: 8
-  m_Name: Player1
+  - component: {fileID: 7988866125611135900}
+  - component: {fileID: 3047031927625615633}
+  - component: {fileID: 3686930565222219619}
+  - component: {fileID: 872408866211640545}
+  - component: {fileID: 3982546905073963647}
+  - component: {fileID: 6434035262176342656}
+  - component: {fileID: 3851302127841594097}
+  m_Layer: 0
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1522184431500275010
+--- !u!4 &7988866125611135900
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184431500275015}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 91.20455, y: 17.194296, z: 7.5}
+  m_GameObject: {fileID: 7988866125611135899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.29598522, y: 2.97, z: 7.2346497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1952624264179980681}
+  - {fileID: 6881222093965148919}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1522184431500275009
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &3047031927625615633
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988866125611135899}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 2
+--- !u!114 &3686930565222219619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184431500275015}
+  m_GameObject: {fileID: 7988866125611135899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e880264144f8c4889d3d95275b1ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpInputName: Jump
+  jumpForce: {x: 0, y: 10, z: 0}
+  coyoteTimeDuration: 0.25
+  jumpLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpEndYVelocity: 1
+  fallGravityMultiplier: 3
+  lowJumpGravityMultiplier: 3
+  jumpAmount: 1
+  airJumpForce: {x: 0, y: 7, z: 0}
+  resetVelocityOnAirJump: 0
+  useCollisionCheck: 1
+  collisionOffset: {x: 0, y: -0.5, z: 0}
+  collisionCheckRadius: 1
+  jumpFX: {fileID: 0}
+  airJumpFX: {fileID: 0}
+  fxOffset: {x: 0, y: 0, z: 0}
+  timeBeforeDestroyFX: 3
+  animator: {fileID: 0}
+  jumpTriggerName: jump
+  airJumpTriggerName: jump
+  currentJumpAmount: 1
+  isBeingBumped: 0
+  characterHeight: 1.2
+  displayDebugInfo: 1
+  inputChoiceIndex: 5
+--- !u!114 &872408866211640545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988866125611135899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89deb1c6283fb5043822ef2293aadb4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallJumpInputName: Jump
+  wallJumpForce: {x: 0, y: 10, z: 0}
+  wallJumpLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  invertLookDirectionOnWallJump: 1
+  gravityDampenWhileOnWall: 2
+  preventMovingAfterWallJump: 0
+  movePreventionDuration: 0.25
+  mover: {fileID: 0}
+  resetJumpCountOnWallJump: 1
+  jumper: {fileID: 0}
+  halfExtents: {x: 0.3, y: 0.5, z: 0.1}
+  minimalHeightAllowedToWallJump: 1.5
+  collisionOffset: {x: 0, y: 0, z: 0.5}
+  jumpFX: {fileID: 0}
+  jumpFXSpawnPoint: {fileID: 0}
+  fxOffset: {x: 0, y: 0, z: 0}
+  timeBeforeDestroyFX: 3
+  animator: {fileID: 0}
+  wallJumpTriggerName: wallJump
+  inputChoiceIndex: 5
+--- !u!136 &3982546905073963647
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988866125611135899}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6434035262176342656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988866125611135899}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 237cc2000fb3c774fae7752d1347f535, type: 3}
@@ -94,115 +198,38 @@ MonoBehaviour:
   xInputChoiceIndex: 0
   yInputChoiceIndex: 0
   zInputChoiceIndex: 0
---- !u!54 &1522184431500275008
-Rigidbody:
+--- !u!95 &3851302127841594097
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184431500275015}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 2
---- !u!114 &1522184431500275011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184431500275015}
+  m_GameObject: {fileID: 7988866125611135899}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e880264144f8c4889d3d95275b1ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpInputName: Jump
-  jumpForce: {x: 0, y: 10, z: 0}
-  coyoteTimeDuration: 0.25
-  jumpLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  jumpEndYVelocity: 1
-  fallGravityMultiplier: 3
-  lowJumpGravityMultiplier: 3
-  jumpAmount: 1
-  airJumpForce: {x: 0, y: 7, z: 0}
-  resetVelocityOnAirJump: 0
-  useCollisionCheck: 1
-  collisionOffset: {x: 0, y: -0.5, z: 0}
-  collisionCheckRadius: 1
-  jumpFX: {fileID: 0}
-  airJumpFX: {fileID: 0}
-  fxOffset: {x: 0, y: 0, z: 0}
-  timeBeforeDestroyFX: 3
-  animator: {fileID: 0}
-  jumpTriggerName: jump
-  airJumpTriggerName: jump
-  currentJumpAmount: 1
-  isBeingBumped: 0
-  characterHeight: 1.2
-  displayDebugInfo: 1
-  inputChoiceIndex: 5
---- !u!114 &1522184431500275036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184431500275015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89deb1c6283fb5043822ef2293aadb4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallJumpInputName: Jump
-  wallJumpForce: {x: 0, y: 10, z: 0}
-  wallJumpLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  invertLookDirectionOnWallJump: 1
-  gravityDampenWhileOnWall: 2
-  preventMovingAfterWallJump: 0
-  movePreventionDuration: 0.25
-  mover: {fileID: 0}
-  resetJumpCountOnWallJump: 1
-  jumper: {fileID: 1522184431500275011}
-  halfExtents: {x: 0.3, y: 0.5, z: 0.1}
-  minimalHeightAllowedToWallJump: 1.5
-  collisionOffset: {x: 0, y: 0, z: 0.5}
-  jumpFX: {fileID: 0}
-  jumpFXSpawnPoint: {fileID: 0}
-  fxOffset: {x: 0, y: 0, z: 0}
-  timeBeforeDestroyFX: 3
-  animator: {fileID: 0}
-  wallJumpTriggerName: wallJump
-  inputChoiceIndex: 5
---- !u!136 &-5781542776365138237
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522184431500275015}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &2059169848650169954
+  m_Avatar: {fileID: 9000000, guid: 4d2ba8b40cec9014099836a86e3fdb3d, type: 3}
+  m_Controller: {fileID: 9100000, guid: b4eed1e3bfa9e3e498590284cdf508b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
+    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform
+    'mixamorig:RightHandIndex3'\n\tTransform 'mixamorig:RightFoot'\n\tand more ...\n\tFrom
+    animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &6410234653048939804
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1522184431500275010}
+    m_TransformParent: {fileID: 7988866125611135900}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
@@ -212,17 +239,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.11611
+      value: 0.17799
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.11611
+      value: 0.17799
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.11611
+      value: 0.17799
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
@@ -232,7 +259,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
@@ -274,16 +301,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5900572701946122095, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ac0e39d3941be448a45d2b8856897ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
         type: 3}
       propertyPath: m_Name
       value: SadSad
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 4d2ba8b40cec9014099836a86e3fdb3d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d2ba8b40cec9014099836a86e3fdb3d, type: 3}
---- !u!4 &1952624264179980681 stripped
+--- !u!4 &6881222093965148919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d2ba8b40cec9014099836a86e3fdb3d,
     type: 3}
-  m_PrefabInstance: {fileID: 2059169848650169954}
+  m_PrefabInstance: {fileID: 6410234653048939804}
   m_PrefabAsset: {fileID: 0}
